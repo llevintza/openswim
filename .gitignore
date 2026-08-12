@@ -1,0 +1,79 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
+*.code-workspace
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+credentials.json
+
+# Go
+apps/api/bin/
+apps/api/dist/
+*.exe
+*.test
+*.out
+vendor/
+
+# Node / Next.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+apps/web/.next/
+apps/web/out/
+apps/web/build/
+apps/web/coverage/
+*.tsbuildinfo
+next-env.d.ts
+
+# iOS / Xcode
+apps/ios/build/
+apps/ios/DerivedData/
+apps/ios/*.xcuserdata/
+apps/ios/**/xcuserdata/
+apps/ios/*.xcworkspace/xcuserdata/
+*.xcuserstate
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+Pods/
+Carthage/Build/
+.swiftpm/
+Package.resolved
+
+# Android
+apps/android/.gradle/
+apps/android/build/
+apps/android/app/build/
+apps/android/local.properties
+apps/android/.cxx/
+*.apk
+*.aab
+*.ap_
+*.dex
+captures/
+.externalNativeBuild/
+
+# Deploy / local data
+deploy/data/
+*.sqlite
+*.db
+
+# Logs / tmp
+logs/
+*.log
+tmp/
+temp/
+.cache/
