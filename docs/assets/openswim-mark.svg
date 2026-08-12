@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="OpenSwim">
+  <defs>
+    <linearGradient id="pool" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B4F6C"/>
+      <stop offset="55%" stop-color="#01BAEF"/>
+      <stop offset="100%" stop-color="#20A4F3"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#pool)"/>
+  <!-- lane lines -->
+  <g stroke="#E8F7FC" stroke-opacity="0.35" stroke-width="2">
+    <path d="M24 38h80M24 54h80M24 70h80M24 86h80"/>
+  </g>
+  <!-- wave -->
+  <path fill="#F7FBFD" fill-opacity="0.95"
+        d="M18 78c12-10 22-10 34 0s22 10 34 0 22-10 34 0v22H18V78z"/>
+  <!-- timing mark (starter pulse) -->
+  <circle cx="96" cy="34" r="10" fill="#FFB703"/>
+  <circle cx="96" cy="34" r="4" fill="#0B4F6C"/>
+</svg>

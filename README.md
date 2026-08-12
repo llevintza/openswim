@@ -1,72 +1,116 @@
-# OpenSwim
+<p align="center">
+  <img src="docs/assets/openswim-mark.svg" width="112" alt="OpenSwim mark" />
+</p>
 
-**OpenSwim** is a free, ad-free platform for small-town swim teams. It combines team operations, paperless meet timing, live parent results, ribbon labels, and manager↔parent chat in one open stack—without subscriptions, ads, or artificial feature gates.
+```text
+   ____                  _____         _
+  / __ \____  ___  ____ / ___/      __(_)___ ___
+ / / / / __ \/ _ \/ __ \\__ \ | /| / / / __ `__ \
+/ /_/ / /_/ /  __/ / / /__/ / |/ |/ / / / / / / /
+\____/ .___/\___/_/ /_/____/|__/|__/_/_/ /_/ /_/
+    /_/
+```
 
-## The idea
+<p align="center">
+  <strong>Swim team ops. Meet day timing. Live results.</strong><br />
+  Free forever — no ads, no paywalls, built for small-town teams.
+</p>
 
-Local summer leagues and rec teams often juggle several paid or limited apps (TeamSnap for roster/chat, Swimmingly for meet timing, SwimminglyFan for live results). Towns either live with missing features, pay for multiple products, or both.
+<p align="center">
+  <a href="docs/onboarding.md"><img alt="Get started" src="https://img.shields.io/badge/get_started-onboarding-0B4F6C?style=for-the-badge" /></a>
+  <a href="LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/license-MIT-20A4F3?style=for-the-badge" /></a>
+  <a href="docs/roadmap.md"><img alt="Phase 0" src="https://img.shields.io/badge/status-Phase_0_scaffold-01BAEF?style=for-the-badge" /></a>
+</p>
 
-OpenSwim’s goal is the **combined functionality** of those tools as a single free project that towns can use and contributors can improve:
+---
 
-- **Coaches / managers** — orgs, seasons, rosters, meet setup, scoring
-- **Meet volunteers** — starter, lane timers, scorekeeper (iPad-friendly), judges
-- **Parents / fans** — heat sheets, live results, rankings, team chat
+## Why OpenSwim exists
 
-## What it will do
+Small-town and summer-league teams deserve the same polish big clubs pay for — without stacking subscriptions.
 
-- Register teams and swimmers; track seasons across years
-- Run dual (and later multi-team) meets with phone-based timing synced to a scorekeeper
-- Publish live results and rankings; export ribbon labels for printing
-- Keep managers and parents aligned with team chat and (later) schedules / volunteers
+Today that usually means a frankenstein setup:
 
-See the [roadmap](docs/roadmap.md) and [backlog](docs/backlog/epics.md) for phased delivery. Current MVP aim: one paperless dual meet with live parent results and basic chat.
+| Need | Typical paid / limited tools |
+|------|------------------------------|
+| Rosters, chat, schedules | TeamSnap |
+| Phone timing & scoring | Swimmingly |
+| Live heat sheets & results | SwimminglyFan |
 
-## Architecture
+Towns either **cut features**, **pay for multiple apps**, or **both**. OpenSwim’s bet is one open stack that covers the whole meet weekend — from signing up swimmers to printing ribbon labels — and stays **free and ad-free**.
 
-| Layer | Stack |
+## The product
+
+OpenSwim is the clubhouse, the deck, and the parent’s pocket:
+
+| Who | What they get |
+|-----|----------------|
+| **Coaches & managers** | Orgs, seasons, rosters, meet entries, scoring, team chat |
+| **Timers & scorekeepers** | Native phone/iPad timing huddle — starter pulse, lane stops, verify & publish |
+| **Parents & fans** | Live heat sheets, results, rankings, race-aware updates |
+
+### Meet day, paperless
+
+1. Seed a dual meet and share the heat sheet  
+2. Volunteers join the huddle (QR) as starter / timer / scorekeeper  
+3. Times sync live → scorekeeper verifies → parents see results  
+4. Export ribbon labels for the award table  
+
+Native **SwiftUI** and **Kotlin Compose** apps handle timing on purpose: clock sync and deck reliability beat cross-platform compromises.
+
+### Beyond one Saturday
+
+- Track swimmers across seasons and years  
+- Rankings and team scores during the meet  
+- Manager ↔ parent chat (schedules & volunteers later)  
+- League / multi-team formats and Hy-Tek-style interop on the roadmap  
+
+Full story: [roadmap](docs/roadmap.md) · [backlog](docs/backlog/epics.md) · [competitor map](docs/competitors.md)
+
+## Stack
+
+| Layer | Choice |
 |-------|--------|
 | API | Go + Postgres + WebSockets |
-| Web | Next.js (App Router) TypeScript |
+| Web | Next.js (App Router) · TypeScript |
 | iOS / iPad | Native SwiftUI |
 | Android | Native Kotlin Compose |
 | Contracts | OpenAPI in `packages/contracts` |
 
-Native mobile is intentional: meet-day timers need reliable clock sync and foreground timing behavior.
-
 ## Status
 
-**Phase 0 — scaffold.** Documentation, monorepo layout, and agent metadata are in place. Application runtimes (Go module, Next.js, Xcode, Android Gradle) are **not** bootstrapped yet. You can contribute to docs and structure today; local “run the app” steps arrive after Phase 0 boot.
+**Phase 0 — scaffold.** Docs, monorepo layout, and agent metadata are here. App runtimes are **not** bootstrapped yet — perfect time to shape the product and docs. Runnable local apps come with Phase 0 boot.
 
-## Get started
+## Dive in
 
-**New contributors:** follow the **[local onboarding guide](docs/onboarding.md)** (prerequisites, tools, and how to orient in the repo).
+| I want to… | Go here |
+|------------|---------|
+| Set up my machine | **[Onboarding guide](docs/onboarding.md)** |
+| Send a change | [Contributing](CONTRIBUTING.md) |
+| See what’s planned | [Roadmap](docs/roadmap.md) · [Tasks](docs/backlog/tasks.md) |
+| Learn the domain | [Domain model](docs/domain-model.md) |
+| Report a vulnerability | [Security](SECURITY.md) |
 
-Also useful:
+Community: [Contributors](CONTRIBUTORS.md) · [Code of Conduct](CODE_OF_CONDUCT.md) · [MIT License](LICENSE)
 
-- [Contributing](CONTRIBUTING.md) · [Contributors](CONTRIBUTORS.md) · [Code of Conduct](CODE_OF_CONDUCT.md) · [Security](SECURITY.md)
-- [Roadmap](docs/roadmap.md) · [Domain model](docs/domain-model.md) · [Competitor mapping](docs/competitors.md)
-- [Epics](docs/backlog/epics.md) · [Features](docs/backlog/features.md) · [Tasks](docs/backlog/tasks.md)
+## Repository map
 
-## Repository layout
-
-```
-apps/api              Go API (scaffold)
-apps/web              Next.js web (scaffold)
-apps/ios              SwiftUI (scaffold)
-apps/android          Compose (scaffold)
-packages/contracts    Shared OpenAPI (scaffold)
-packages/design-tokens
-docs/                 Roadmap, backlog, onboarding, agent metadata
-skills/               Portable Agent Skills (harness-agnostic)
-.github/              CODEOWNERS, PR template, Copilot adapter (no CI workflows yet)
-scripts/              Future codegen / helpers
-deploy/               Future self-host configs
+```text
+apps/api           Go API              (scaffold)
+apps/web           Next.js web         (scaffold)
+apps/ios           SwiftUI             (scaffold)
+apps/android       Compose             (scaffold)
+packages/          contracts, tokens
+docs/              roadmap, onboarding, agents
+skills/            portable Agent Skills
+.github/           CODEOWNERS, PR template
 ```
 
 ## For coding agents
 
-Harness-agnostic entrypoint: **[AGENTS.md](AGENTS.md)**. Details: [docs/agents/](docs/agents/). Skills: [skills/](skills/). Adapters (`CLAUDE.md`, `.cursor/rules/`, etc.) are pointers only—do not duplicate project rules into them.
+Start at **[AGENTS.md](AGENTS.md)**. Details in [docs/agents/](docs/agents/). Skills in [skills/](skills/). Harness adapters (`CLAUDE.md`, `.cursor/rules/`, …) are pointers only — don’t fork the rules.
 
-## License
+---
 
-MIT — see [LICENSE](LICENSE).
+<p align="center">
+  <sub>Built for the pool deck — not the paywall.</sub>
+</p>
