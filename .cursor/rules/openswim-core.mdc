@@ -1,0 +1,16 @@
+---
+description: OpenSwim core — follow harness-agnostic AGENTS.md (do not duplicate rules here)
+alwaysApply: true
+---
+
+# OpenSwim (Cursor adapter)
+
+This rule is a **pointer only**. Do not add project conventions here.
+
+1. Read and follow repo-root `AGENTS.md`.
+2. Enforce `docs/agents/constraints.md` and `docs/agents/conventions.md`.
+3. Use nested `apps/*/AGENTS.md` when editing those packages.
+4. Load portable skills from `skills/*/SKILL.md`.
+5. Log tooling failures in `docs/agents/known-issues.md`.
+
+Full harness map: `docs/agents/harness-map.md`.
