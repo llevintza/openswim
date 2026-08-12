@@ -6,6 +6,18 @@ Agents: when you hit a failure during execution, append an entry using the templ
 
 ---
 
+## 2026-08-12 — GitHub shows `.github/README.md` instead of root README
+
+| Field | Value |
+|-------|--------|
+| Harness / tool | GitHub repository home page |
+| Symptom | Repo homepage rendered the short `.github/README.md` (“GitHub metadata”) instead of the product splash in root `README.md` |
+| Impact | Figlet/logo README appeared broken or missing on github.com/llevintza/openswim |
+| Workaround | Do **not** keep a `.github/README.md`. Put GitHub-folder docs in `.github/ABOUT.md` (or similar). GitHub’s precedence is `.github/` → root → `docs/` |
+| Status | Resolved (PR #4) |
+
+---
+
 ## 2026-08-12 — GitHub OAuth rejects `.github/workflows/` pushes
 
 | Field | Value |

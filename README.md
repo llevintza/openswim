@@ -102,7 +102,7 @@ apps/android       Compose             (scaffold)
 packages/          contracts, tokens
 docs/              roadmap, onboarding, agents
 skills/            portable Agent Skills
-.github/           CODEOWNERS, PR template
+.github/           CODEOWNERS, PR template (see ABOUT.md)
 ```
 
 ## For coding agents
