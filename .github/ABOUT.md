@@ -1,5 +1,7 @@
 # GitHub metadata
 
+> Not named `README.md` on purpose: GitHub prefers `.github/README.md` over the root product README when both exist.
+
 Community and GitHub-specific files for OpenSwim live here.
 
 | Path | Purpose |
