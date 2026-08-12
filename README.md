@@ -27,7 +27,8 @@ apps/ios          SwiftUI (scaffold)
 apps/android      Compose (scaffold)
 packages/contracts
 packages/design-tokens
-docs/             Roadmap, domain model, backlog
+docs/             Roadmap, domain model, backlog, agent metadata
+skills/           Portable Agent Skills (harness-agnostic)
 scripts/          Future codegen / helpers
 deploy/           Future self-host configs
 ```
@@ -38,6 +39,10 @@ deploy/           Future self-host configs
 - [Domain model](docs/domain-model.md)
 - [Competitor mapping](docs/competitors.md)
 - [Epics](docs/backlog/epics.md) · [Features](docs/backlog/features.md) · [Tasks](docs/backlog/tasks.md)
+
+## For coding agents
+
+Harness-agnostic entrypoint: **[AGENTS.md](AGENTS.md)**. Details and anti-duplication policy live in [docs/agents/](docs/agents/) ([harness map](docs/agents/harness-map.md), [known issues](docs/agents/known-issues.md)). Portable skills: [skills/](skills/). Thin adapters only: `CLAUDE.md`, `.cursor/rules/`, `.github/copilot-instructions.md`, `.gemini/settings.json`.
 
 ## Current status
 
