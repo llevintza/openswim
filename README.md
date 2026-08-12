@@ -1,15 +1,6 @@
 <p align="center">
-  <img src="docs/assets/openswim-mark.svg" width="112" alt="OpenSwim mark" />
+  <img src="brand/openswim-lockup-stacked.png" width="280" alt="OpenSwim" />
 </p>
-
-```text
-   ____                  _____         _
-  / __ \____  ___  ____ / ___/      __(_)___ ___
- / / / / __ \/ _ \/ __ \\__ \ | /| / / / __ `__ \
-/ /_/ / /_/ /  __/ / / /__/ / |/ |/ / / / / / / /
-\____/ .___/\___/_/ /_/____/|__/|__/_/_/ /_/ /_/
-    /_/
-```
 
 <p align="center">
   <strong>Swim team ops. Meet day timing. Live results.</strong><br />
@@ -17,9 +8,9 @@
 </p>
 
 <p align="center">
-  <a href="docs/onboarding.md"><img alt="Get started" src="https://img.shields.io/badge/get_started-onboarding-0B4F6C?style=for-the-badge" /></a>
-  <a href="LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/license-MIT-20A4F3?style=for-the-badge" /></a>
-  <a href="docs/roadmap.md"><img alt="Phase 0" src="https://img.shields.io/badge/status-Phase_0_scaffold-01BAEF?style=for-the-badge" /></a>
+  <a href="docs/onboarding.md"><img alt="Get started" src="https://img.shields.io/badge/get_started-onboarding-0E2B3B?style=for-the-badge" /></a>
+  <a href="LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/license-MIT-16A9A0?style=for-the-badge" /></a>
+  <a href="docs/roadmap.md"><img alt="Phase 0" src="https://img.shields.io/badge/status-Phase_0_scaffold-0E2B3B?style=for-the-badge" /></a>
 </p>
 
 ---
@@ -99,6 +90,7 @@ apps/api           Go API              (scaffold)
 apps/web           Next.js web         (scaffold)
 apps/ios           SwiftUI             (scaffold)
 apps/android       Compose             (scaffold)
+brand/             marks, icons, lockups, social preview
 packages/          contracts, tokens
 docs/              roadmap, onboarding, agents
 skills/            portable Agent Skills
