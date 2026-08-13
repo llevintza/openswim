@@ -20,7 +20,7 @@ Hard rules for OpenSwim. Do not violate unless the user explicitly overrides the
 ## Scope discipline
 
 - Follow [`docs/roadmap.md`](../roadmap.md) phases and [`docs/backlog/`](../backlog/) IDs.
-- Phase 0 scaffold is docs + empty dirs; **do not** bootstrap app frameworks unless asked.
+- Phase 0 scaffold is docs + empty dirs for client apps; **do not** bootstrap Next.js/Xcode/Android unless asked. The Go API module under `apps/api` is initialized; use the Dev Container for local `go` commands.
 - Prefer updating backlog docs when product scope changes; do not invent parallel tracking systems.
 - Keep PRs focused; avoid drive-by refactors unrelated to the task.
 

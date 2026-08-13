@@ -6,5 +6,6 @@ Go + Postgres API package.
 - Coding notes: [`docs/agents/coding/go-api.md`](../../docs/agents/coding/go-api.md).
 - Domain: [`docs/domain-model.md`](../../docs/domain-model.md).
 - Contracts: [`packages/contracts`](../../packages/contracts).
+- Observability decision: [`docs/adr/0002-api-observability.md`](../../docs/adr/0002-api-observability.md).
 
-Do not bootstrap the Go module unless the user explicitly requests it.
+Module root is this directory (`cmd/`, `internal/`). Prefer the repo Dev Container for `go` commands.

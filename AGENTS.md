@@ -47,7 +47,7 @@ Load project skills from repo-root [`skills/`](skills/) (not harness-private ski
 
 ## Current phase
 
-Phase 0 scaffold is in place. Do **not** bootstrap Go modules, Next.js, Xcode, or Android projects unless the user explicitly asks.
+Phase 0 foundations: docs + **Go API skeleton** under `apps/api`. Do **not** bootstrap Next.js, Xcode, or Android projects unless the user explicitly asks. Prefer the root Dev Container for API `go` commands.
 
 ## Commits and PRs
 

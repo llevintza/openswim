@@ -2,7 +2,7 @@
 
 Feature catalog by epic. IDs are stable references for tasks (`{Epic}-{Feature}`).
 
-Status legend: `planned` | `mvp` | `later`
+Status legend: `planned` | `mvp` | `later` | `done`
 
 ---
 
@@ -11,7 +11,7 @@ Status legend: `planned` | `mvp` | `later`
 | ID | Feature | Phase | Status | Description |
 |----|---------|-------|--------|-------------|
 | E1-F1 | Repo & docs scaffold | 0 | mvp | Monorepo layout, license, roadmap, backlog |
-| E1-F2 | Go API skeleton | 0 | planned | Module, config, `/health`, Postgres connection |
+| E1-F2 | Go API skeleton | 0 | done | Module, config, `/health`, Postgres connection |
 | E1-F3 | OpenAPI contracts package | 0 | planned | Shared OpenAPI specs under `packages/contracts` |
 | E1-F4 | Email + password auth | 1 | mvp | Register, login, logout, session/JWT |
 | E1-F5 | Magic link auth | 1 | mvp | Passwordless email login |
@@ -170,7 +170,7 @@ Status legend: `planned` | `mvp` | `later`
 | E12-F2 | Hy-Tek / SDIF / CL2 | 5 | later | Import/export where useful |
 | E12-F3 | Scoreboard display mode | 5 | later | Full-screen TV from scorekeeper |
 | E12-F4 | Docker Compose deploy | 5 | later | One-command self-host |
-| E12-F5 | Observability & backups | 5 | later | Logs, metrics, DB backup docs |
+| E12-F5 | Observability & backups | 5 | later | Structured logs, Prometheus metrics, `/livez`/`/readyz`, DB backup docs (see ADR 0002) |
 | E12-F6 | Offline fee tracking | 5 | later | Mark registration paid; optional Stripe |
 
 ---

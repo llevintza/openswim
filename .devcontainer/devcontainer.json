@@ -1,0 +1,30 @@
+{
+  "name": "OpenSwim",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "dev",
+  "workspaceFolder": "/workspace",
+  "shutdownAction": "stopCompose",
+  "forwardPorts": [8080, 5432],
+  "portsAttributes": {
+    "8080": { "label": "API", "onAutoForward": "notify" },
+    "5432": { "label": "Postgres", "onAutoForward": "silent" }
+  },
+  "postCreateCommand": "cd apps/api && go mod download",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "golang.go",
+        "ms-azuretools.vscode-docker"
+      ],
+      "settings": {
+        "go.toolsManagement.checkForUpdates": "local",
+        "go.useLanguageServer": true
+      }
+    }
+  },
+  "remoteEnv": {
+    "PORT": "8080",
+    "DATABASE_URL": "postgres://openswim:openswim@postgres:5432/openswim?sslmode=disable",
+    "JWT_SECRET": "dev-only-change-me"
+  }
+}
