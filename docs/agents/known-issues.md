@@ -6,6 +6,18 @@ Agents: when you hit a failure during execution, append an entry using the templ
 
 ---
 
+## 2026-08-12 — No Docker / Go on agent host during E1-F2
+
+| Field | Value |
+|-------|--------|
+| Harness / tool | Cursor agent shell on macOS worktree |
+| Symptom | `docker` and `go` missing from PATH while implementing E1-F2; Dev Container could not be started from the agent |
+| Impact | Could not verify `go run` against Compose Postgres or build the Dev Container image in-session |
+| Workaround | Install Go via Homebrew for agent-side `go test`/`go mod tidy` only; humans use [`.devcontainer/`](../../.devcontainer/). Re-verify API + `/health` inside the Dev Container on a machine with Docker |
+| Status | Open (environment); Dev Container is the supported path |
+
+---
+
 ## 2026-08-12 — GitHub shows `.github/README.md` instead of root README
 
 | Field | Value |

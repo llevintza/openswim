@@ -1,0 +1,2 @@
+# Empty until the first schema migration is added (E1-F4+).
+# Migration runner: golang-migrate (see internal/migrate).

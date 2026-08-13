@@ -18,11 +18,11 @@ Task IDs: `{Feature}-T{n}` (e.g. `E5-F2-T1`).
 
 ### E1-F2 Go API skeleton *(post-scaffold)*
 
-- [ ] E1-F2-T1 Initialize Go module under `apps/api`
-- [ ] E1-F2-T2 Config via env (`DATABASE_URL`, `PORT`, `JWT_SECRET`)
-- [ ] E1-F2-T3 HTTP server with `GET /health`
-- [ ] E1-F2-T4 Postgres connection + migration runner stub
-- [ ] E1-F2-T5 Dockerfile stub for API
+- [x] E1-F2-T1 Initialize Go module under `apps/api`
+- [x] E1-F2-T2 Config via env (`DATABASE_URL`, `PORT`, `JWT_SECRET`)
+- [x] E1-F2-T3 HTTP server with `GET /health`
+- [x] E1-F2-T4 Postgres connection + migration runner stub
+- [x] E1-F2-T5 Dockerfile stub for API
 
 ### E1-F3 OpenAPI contracts
 
@@ -288,4 +288,16 @@ When starting Phase 2, expand these features into tasks in a new section or file
 
 Phase 3: E8-F5–F7, E9-\*, E11-F1–F2  
 Phase 4: E7-F5, E7-F7, E10-\*, E11-F3–F4  
-Phase 5: E12-\*
+
+### Phase 5 — Interop & ops (partial)
+
+Implementation timing is flexible; follow [ADR 0002](../adr/0002-api-observability.md) for T1–T3.
+
+### E12-F5 Observability & backups
+
+- [ ] E12-F5-T1 Structured logging per ADR 0002 (`LOG_LEVEL`, fields, request/correlation IDs)
+- [ ] E12-F5-T2 Prometheus `/metrics` per ADR 0002 (HTTP + DB pool; scrape docs)
+- [ ] E12-F5-T3 Implement `/livez` + `/readyz`; replace stubs; HEALTHCHECK / probe examples per ADR 0002
+- [ ] E12-F5-T4 DB backup docs / runbook
+
+Remaining Phase 5 features to expand when started: E12-F1–F4, E12-F6

@@ -69,16 +69,17 @@ Full story: [roadmap](docs/roadmap.md) · [backlog](docs/backlog/epics.md) · [c
 
 ## Status
 
-**Phase 0 — scaffold.** Docs, monorepo layout, and agent metadata are here. App runtimes are **not** bootstrapped yet — perfect time to shape the product and docs. Runnable local apps come with Phase 0 boot.
+**Phase 0 — foundations.** Docs, monorepo layout, agent metadata, and the **Go API skeleton** (`apps/api`) are in place. Open the [Dev Container](.devcontainer/) for local API work (Docker on the host only). Web/iOS/Android runtimes are still scaffold-only.
 
 ## Dive in
 
 | I want to… | Go here |
 |------------|---------|
-| Set up my machine | **[Onboarding guide](docs/onboarding.md)** |
+| Set up my machine | **[Onboarding guide](docs/onboarding.md)** (Dev Containers) |
 | Send a change | [Contributing](CONTRIBUTING.md) |
 | See what’s planned | [Roadmap](docs/roadmap.md) · [Tasks](docs/backlog/tasks.md) |
 | Learn the domain | [Domain model](docs/domain-model.md) |
+| Read architecture decisions | [ADRs](docs/adr/) |
 | Report a vulnerability | [Security](SECURITY.md) |
 
 Community: [Contributors](CONTRIBUTORS.md) · [Code of Conduct](CODE_OF_CONDUCT.md) · [MIT License](LICENSE)
@@ -86,13 +87,14 @@ Community: [Contributors](CONTRIBUTORS.md) · [Code of Conduct](CODE_OF_CONDUCT.
 ## Repository map
 
 ```text
-apps/api           Go API              (scaffold)
+apps/api           Go API              (skeleton: /health)
 apps/web           Next.js web         (scaffold)
 apps/ios           SwiftUI             (scaffold)
 apps/android       Compose             (scaffold)
 brand/             marks, icons, lockups, social preview
 packages/          contracts, tokens
-docs/              roadmap, onboarding, agents
+docs/              roadmap, onboarding, agents, ADRs
+.devcontainer/     Dev Container (Go + Postgres)
 skills/            portable Agent Skills
 .github/           CODEOWNERS, PR template (see ABOUT.md)
 ```

@@ -12,8 +12,14 @@
 - Product roadmap/backlog: `docs/roadmap.md`, `docs/backlog/*`.
 - Domain language: `docs/domain-model.md`.
 - Competitor mapping: `docs/competitors.md`.
+- Architecture decisions: `docs/adr/`.
 - Agent guidance: this tree (`docs/agents/`).
 - When you hit tooling failures, append [`known-issues.md`](./known-issues.md).
+
+## Dev Containers
+
+- Supported local workflow is the root [`.devcontainer/`](../../.devcontainer/) (Go + Postgres today).
+- Prefer running `go` / API commands inside the Dev Container shell; do not assume host-installed language toolchains.
 
 ## Git
 
