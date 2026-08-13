@@ -51,10 +51,10 @@ Phase 0 foundations: docs + **Go API skeleton** under `apps/api`. Do **not** boo
 
 ## Commits and PRs
 
-- Feature branches; open PRs against `main`  
+- **GitHub Flow:** short-lived `feature/` \| `fix/` \| `docs/` \| `chore/` branches from `main`; PR into `main`  
+- **Conventional Commits:** `type(scope): subject` via HEREDOC; commit only when asked  
 - No force-push to `main`  
-- Commit only when the user asks (this repo’s agent conventions)  
-- Prefer HEREDOC commit messages focused on why  
+- Full rules: [`docs/agents/conventions.md`](docs/agents/conventions.md)  
 
 ## Known issues
 

@@ -14,11 +14,15 @@ Coding agents should follow [AGENTS.md](AGENTS.md) (harness-agnostic). Do not du
 ## How we work
 
 - **License:** MIT ([LICENSE](LICENSE)).
-- **Branching:** branch from `main` using `feature/...`, `fix/...`, or `docs/...`.
+- **Workflow:** [GitHub Flow](https://docs.github.com/en/get-started/using-github/github-flow) — branch from `main`, open a PR into `main`, merge, delete the branch.
+- **Branching:** `feature/<slug>`, `fix/<slug>`, `docs/<slug>`, or `chore/<slug>` (lowercase kebab-case; prefer backlog ids in the slug). Do not use `username/...` names.
+- **Commits:** [Conventional Commits](https://www.conventionalcommits.org/) — `type(optional-scope): subject` (e.g. `feat(api): add health endpoint`).
 - **PRs:** open against `main`; fill out the PR template (summary + test plan).
 - **Scope:** keep changes focused; prefer updating backlog docs when changing product scope.
 - **Secrets:** never commit `.env`, keys, or credentials.
 - **CI:** GitHub Actions workflows are not in the repo yet (see [known issues](docs/agents/known-issues.md)).
+
+Agent-oriented detail: [docs/agents/conventions.md](docs/agents/conventions.md).
 
 ## What to work on
 
