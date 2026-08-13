@@ -84,12 +84,13 @@ Details: [apps/api/README.md](../apps/api/README.md).
 
 ## Contribution path
 
-1. Create a feature branch from `main` (e.g. `feature/short-description`).
+1. Create a short-lived branch from `main` using GitHub Flow naming, e.g. `feature/e1-f3-openapi` or `docs/conventional-git-naming`.
 2. Make focused changes; do not commit secrets (`.env`, keys, credentials).
-3. Open a PR against `main` using the GitHub PR template.
-4. Expect review from CODEOWNERS (`@llevintza`).
+3. Commit with [Conventional Commits](https://www.conventionalcommits.org/), e.g. `feat(api): add health endpoint` or `docs(agents): clarify onboarding`.
+4. Open a PR against `main` using the GitHub PR template.
+5. Expect review from CODEOWNERS (`@llevintza`).
 
-Details: [CONTRIBUTING.md](../CONTRIBUTING.md).
+Details: [CONTRIBUTING.md](../CONTRIBUTING.md) · [docs/agents/conventions.md](agents/conventions.md).
 
 ## Troubleshooting
 
